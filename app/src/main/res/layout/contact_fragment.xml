@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <Button
+        android:id="@+id/agregarContacto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/contactosListView"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/contactosListView"
+        android:capitalize="none"
+        android:text="AGREGAR CONTACTO"
+        android:textColor="@color/secondaryDarkColor"
+        android:textStyle="bold" />
+
+    <ListView
+        android:id="@+id/contactosListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/agregarContacto"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginStart="6dp" />
+
+</RelativeLayout>

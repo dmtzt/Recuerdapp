@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:id="@+id/description_editar_perfil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Crear Perfil"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/backButton"
+            android:layout_toEndOf="@+id/backButton" />
+
+        <TextView
+            android:id="@+id/submitButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="38dp"
+            android:layout_marginRight="25dp"
+            android:text="GUARDAR"
+            android:textColor="@android:color/white" />
+
+        <RelativeLayout
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:id="@+id/backButton">
+
+            <ImageView
+                android:id="@+id/cancelImg"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="11dp"
+                android:layout_marginStart="11dp"
+                android:src="@mipmap/ic_cancel" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="220dp">
+
+                <ImageView
+                    android:id="@+id/agregarFotoPerfil"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/ic_add_picture" />
+
+                <com.recuerdapp.custom_shape_views.CircularImageView
+                    android:id="@+id/perfilImage"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:paddingTop="10dp"
+                    android:scaleType="fitXY"
+                    android:visibility="invisible" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="0dp"
+                android:paddingTop="20dp"
+                android:text="DATOS PERSONALES"
+                android:textColor="@color/colorPrimary"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/editarPerfilLayoutNombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+
+                android:layout_marginTop="10dp">
+
+                <EditText
+                    android:id="@+id/nombreET"
+                    style="@style/Widget.AppCompat.EditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Nombre Completo"
+                    android:inputType="textPersonName"
+                    android:textColorHint="@android:color/black"
+                    android:textSize="15sp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:text="Contacto directo"
+                    android:layout_alignBottom="@+id/editarPerfilLayoutCtNumero"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+                <Spinner
+                    android:id="@+id/contactoTypePicker"
+                    android:layout_width="165dp"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/textView7"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/editarPerfilLayoutCtNumero"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_toEndOf="@+id/contactoTypePicker"
+                    android:layout_toRightOf="@+id/contactoTypePicker">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/numeroDescription"
+                        android:text="Número"
+                        android:textSize="15sp"/>
+
+                    <EditText
+                        android:id="@+id/contactoNumeroET"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/textView8"
+                        android:inputType="phone"
+                        android:textSize="15sp" />
+                </android.support.design.widget.TextInputLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/editarPerfilLayoutFdNac"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/textView10">
+
+                    <EditText
+                        android:id="@+id/fdNacET"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Fecha de nacimiento"
+                        android:inputType="date"
+                        android:textSize="15sp" />
+                </android.support.design.widget.TextInputLayout>
+
+                <!-- spinner mode of a date picker -->
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="75dp">
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/sangreTipoPicker"
+                    android:layout_weight="1"
+                    android:text="Género" />
+
+                <Spinner
+                    android:id="@+id/sangreTipoPicker"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/generoPicker"
+                    android:layout_toEndOf="@+id/generoPicker"
+                    android:layout_toRightOf="@+id/generoPicker" />
+
+                <Spinner
+                    android:id="@+id/generoPicker"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="36dp"
+                    android:layout_toLeftOf="@+id/textView11"
+                    android:layout_toStartOf="@+id/textView11" />
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/sangreTipoPicker"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="73dp"
+                    android:layout_marginRight="73dp"
+                    android:text="Tipo de sangre" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:layout_weight="1"
+                android:paddingLeft="0dp"
+                android:text="DOMICILIO PARTICULAR"
+                android:textColor="@color/colorPrimary"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_weight="0.91">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/editarPerfilLayoutDirCalle"
+                    android:layout_width="165dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <EditText
+                        android:id="@+id/calleET"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Calle"
+                        android:inputType="textPersonName"
+                        android:textSize="15sp" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/editarPerfilLayoutDirNumero"
+                    android:layout_width="165dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@+id/editarPerfilLayoutDirCalle">
+
+                    <EditText
+                        android:id="@+id/numeroET"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Numero"
+                        android:inputType="number"
+                        android:textSize="15sp" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/editarPerfilLayoutDirCol"
+                    android:layout_width="165dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/editarPerfilLayoutDirCalle">
+
+                    <EditText
+                        android:id="@+id/coloniaET"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Colonia"
+                        android:inputType="textPersonName"
+                        android:textSize="15sp" />
+                </android.support.design.widget.TextInputLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Estado" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/editarPerfilLayoutDirCiudad"
+                    android:layout_width="165dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="10dp">
+
+                    <EditText
+                        android:id="@+id/ciudadET"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Ciudad"
+                        android:inputType="text"
+                        android:textSize="15sp" />
+                </android.support.design.widget.TextInputLayout>
+
+
+                <Spinner
+                    android:id="@+id/estadoPicker"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView17"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_toLeftOf="@+id/editarPerfilLayoutDirCiudad"
+                    android:layout_toStartOf="@+id/editarPerfilLayoutDirCiudad" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:layout_weight="1"
+                android:paddingLeft="0dp"
+                android:text="HISTORIAL MEDICO"
+                android:textColor="@color/colorPrimary"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/editarPerfilLayoutAlergias"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="10dp">
+
+                    <EditText
+                        android:id="@+id/alergiasET"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Alergias"
+                        android:inputType="textMultiLine"
+                        android:textSize="15sp" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/editarPerfilLayoutMedYH"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/editarPerfilLayoutAlergias">
+
+                    <EditText
+                        android:id="@+id/medicamentosYHorarioET"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Medicamentos y Horario"
+                        android:inputType="textMultiLine"
+                        android:textSize="15sp" />
+                </android.support.design.widget.TextInputLayout>
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/editarPerfilLayoutAntePat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/editarPerfilLayoutMedYH">
+
+                    <EditText
+                        android:id="@+id/antecedentesPatET"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Antecedentes Patológicos"
+                        android:inputType="textMultiLine"
+                        android:textSize="15sp" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/editarPerfilLayoutAnteHer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/editarPerfilLayoutAntePat">
+
+                    <EditText
+                        android:id="@+id/antecedentesHerET"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Antecedentes Heredofamiliares"
+                        android:inputType="textMultiLine"
+                        android:textSize="15sp" />
+                </android.support.design.widget.TextInputLayout>
+
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

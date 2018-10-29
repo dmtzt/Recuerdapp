@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:weightSum="1"
+    app:layout_anchorGravity="center">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingRight="10dp"
+            android:weightSum="1">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:layout_weight="0.05">
+
+                <ImageView
+                    android:id="@+id/editPerfilButton"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginEnd="17dp"
+                    android:layout_marginRight="17dp"
+                    android:layout_marginTop="11dp"
+                    android:background="@mipmap/ic_edit"
+                    android:scaleType="center" />
+
+                <ImageView
+                    android:id="@+id/agregarFotoPerfil"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/ic_add_picture" />
+
+                <com.recuerdapp.custom_shape_views.CircularImageView
+                    android:id="@+id/perfilImage"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:paddingTop="10dp"
+                    android:scaleType="fitXY"
+                    android:visibility="invisible" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/nombreView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="20dp"
+                android:text="Erick Pines"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/contactoDirectoView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:text="Hospital/Médico personal" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/llamarNumeroButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/ic_call_num" />
+
+                <TextView
+                    android:id="@+id/numeroView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:paddingTop="8dp"
+                    android:text="444-782-42-32"
+                    android:textColor="@android:color/black"
+                    android:textSize="17sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:text="Edad" />
+
+            <TextView
+                android:id="@+id/edadView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="21 años"
+                android:textColor="@android:color/black"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:text="Fecha de nacimiento" />
+
+            <TextView
+                android:id="@+id/fechaDeNacimientoView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="01 de Enero de 1997"
+                android:textColor="@android:color/black"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:text="Sexo" />
+
+            <TextView
+                android:id="@+id/generoView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Masculino"
+                android:textColor="@android:color/black"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:text="Tipo de Sangre" />
+
+            <TextView
+                android:id="@+id/tipoDeSangreView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="A+"
+                android:textColor="@android:color/black"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:text="Domicilio" />
+
+            <TextView
+                android:id="@+id/domicilioView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Calle Pinoles 45, Col Ste men se pasa de lanza"
+                android:textColor="@android:color/black"
+                android:textSize="17sp" />
+
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:text="Alergias" />
+
+            <TextView
+                android:id="@+id/alergiasView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@android:color/black"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:text="Medicamentos y Horario" />
+
+            <TextView
+                android:id="@+id/mYHView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@android:color/black"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:text="Antecedentes Patológicos" />
+
+            <TextView
+                android:id="@+id/antPatView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@android:color/black"
+                android:textSize="17sp" />
+
+
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:text="Antecedentes Heredofamiliares" />
+
+            <TextView
+                android:id="@+id/antHerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:text=""
+                android:textColor="@android:color/black"
+                android:textSize="17sp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

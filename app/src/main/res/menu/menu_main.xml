@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+tools:context="com.recuerdapp.recuerdapp.MainActivity">
+    <item
+        android:id="@+id/action_emergencia"
+        android:orderInCategory="100"
+        android:title="Emergencia"
+        android:icon="@mipmap/ic_fast_call"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_informacion"
+        android:orderInCategory="100"
+        android:title="Sobre la app"
+        app:showAsAction="never" />
+
+</menu>
